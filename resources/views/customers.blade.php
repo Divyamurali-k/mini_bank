@@ -16,6 +16,8 @@
                         Listing Customers
                         <a href="{{ route('customers.create') }}" class="btn btn-primary"><i class="fa fa-plus"></i> Add
                             Customer</a>
+                            <a href="{{ route('customers.excelcreate') }}" class="btn btn-primary"><i class="fa fa-download"></i> Import
+                                Customer</a>
                     </div>
                     <div class="card-body">
                         <table id="datatablesSimple">

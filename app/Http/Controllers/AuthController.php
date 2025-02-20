@@ -12,31 +12,6 @@ class AuthController extends Controller
 {
     use HasApiTokens;
 
-    // public function register(Request $request)
-    // {
-    //     $validator = Validator::make($request->all(), [
-    //         'name' => 'required|string|max:255',
-    //         'email' => 'required|string|email|max:255|unique:customers',
-    //         'mobile' => 'required|string|max:15',
-    //         'password' => 'required|string|min:8|confirmed',
-    //     ]);
-
-    //     if ($validator->fails()) {
-    //         return response()->json($validator->errors(), 422);
-    //     }
-
-    //     $customer = Customer::create([
-    //         'name' => $request->name,
-    //         'email' => $request->email,
-    //         'mobile' => $request->mobile,
-    //         'password' => Hash::make($request->password),
-    //         'amount' => 0, 
-    //     ]);
-
-    //     return response()->json(['message' => 'Customer registered successfully!'], 201);
-    // }
-
-
     public function login(Request $request)
     {
         $validator = Validator::make($request->all(), [

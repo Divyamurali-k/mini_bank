@@ -18,3 +18,8 @@ Route::post('/customers', [CustomerController::class, 'store'])->name('customers
 Route::get('/customers/{id}', [CustomerController::class, 'show'])->name('customers.show');
 
 Route::get('/customers/{id}/transactions', [TransactionController::class, 'showTransactions'])->name('customers.transactions');
+
+Route::post('/customers/import', [CustomerController::class, 'storeexcel']);
+
+Route::get('/customers-excel/create', [CustomerController::class, 'excelcreate'])->name('customers.excelcreate');
+Route::post('/customers-excel', [CustomerController::class, 'excelstore'])->name('customers.excelstore');
